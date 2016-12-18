@@ -1,0 +1,15 @@
+<%= form_tag @callback_url, method: "post", class: "login", novalidate: true do %>
+  <div class="control-group">
+    <label class="control-label" for="email-input">Email</label>
+    <input class="form-control" type="email" name="email" value="<%= @conn.params["email"] %>" required />
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="password-input">Password</label>
+    <input class="form-control" type="password" name="password" required />
+  </div>
+
+  <div class="control-group pull-right">
+    <button class="btn btn-primary">Login</div>
+  </div>
+<% end %>

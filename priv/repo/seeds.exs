@@ -9,3 +9,11 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias PhoenixUeberauthComeonin.Repo
+
+Repo.insert! %User{
+  name: "Administrator",
+  email: "admin@admin.com",
+  password: Comeonin.Bcrypt.hashpwsalt("admin")
+}

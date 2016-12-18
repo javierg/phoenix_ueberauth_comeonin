@@ -14,11 +14,13 @@
   <body>
     <div class="container">
       <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
+        <%= if @current_user do %>
+          <nav role="navigation">
+            <ul class="nav nav-pills pull-right">
+              <li><%= link "Logout", to: "/sessions", method: "delete" %></li>
+            </ul>
+          </nav>
+        <% end %>
         <span class="logo"></span>
       </header>
 
